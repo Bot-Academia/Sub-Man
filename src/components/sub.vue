@@ -31,21 +31,41 @@
                     </b-form-group>
                 </li>
             </ul>
-            <button class="btn btn-primary" @click="submit" style="text-align: center">Submit</button>
+            <div class="submit1">
+                <button class="btn btn-primary" @click="submit">Submit</button>
+            </div>
+
         </div>
         <br><br>
         <div class="bill">
             <h1>Your Subscriptions</h1>
             <hr>
-            <b-table striped hover :items="$store.state.active" :fields="fields"></b-table>
+
+            <b-table striped hover :items="$store.state.active" :fields="fields">
+            </b-table>
 
         </div>
         <br><br>
+        <div class="sub">
+            <h1>Manage existing subscriptions</h1>
+            <p>Click on the subscription to remove it</p>
+            <hr>
+            <br>
 
+            <ul>
+                <li v-for="(name,index) in dcount" :key="name.id">
+                    <img
+                            :src="require('../assets/' + name.image)"
+                            class="img-thumbnail"
+                            @click="remove(index)"
+                    /></li>
+            </ul>
+        </div>
     </div>
 </template>
 
 <script>
+    import {mapGetters} from "vuex";
     import { service } from "../services.js";
     export default {
         name: "sub",
@@ -87,8 +107,14 @@
                 };
                 this.$store.state.active.push(addition)
                 this.display=false;
+            },
+            remove(item) {
+                this.$store.state.active.splice(item,1)
             }
-        }
+        },
+        computed: mapGetters([
+            'dcount'
+        ])
     }
 </script>
 
@@ -117,16 +143,21 @@
         height: 100px;
         width: 100px;
     }
-    ul#menu li {
+    ul li {
         display:inline;
     }
     .bill{
         background-color: rgba(34, 139, 230,0.5);
         border-radius: 15px;
+        padding: 10px 10px 10px 10px;
+        font-size: 24px;
         box-shadow: 10px 10px 54px -6px rgba(0, 0, 0, 0.75);
     }
     .title{
         font-size: 34px;
         font-weight: 700;
+    }
+    .submit1{
+        text-align: center;
     }
 </style>

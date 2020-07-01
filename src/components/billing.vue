@@ -60,7 +60,7 @@
                     {key: 'name'},
                     {key: 'cost', sortable: true},
                     {key: 'plan'},
-                    
+
                 ],
                 monthly: 0,
                 yearly: 0,

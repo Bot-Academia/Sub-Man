@@ -35,6 +35,9 @@ export default {
         appheader: header,
         appfooter: footer,
         feature: parallax
+    },
+    created() {
+        document.body.style.backgroundColor = "white";
     }
 }
 </script>

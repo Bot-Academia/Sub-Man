@@ -66,6 +66,67 @@ export const service = {
                             cost: 129,
                             type: 1
                         }],
+                    },
+                    {
+                        img:"ytp.png",
+                        name: 'Youtube Premium',
+                        plans: [{
+                            plan: '1-month',
+                            cost: 129,
+                            type: 1
+                        },{
+                            plan: '1-month (student)',
+                            cost: 79,
+                            type: 1
+                        }],
+                    },
+                    {
+                        img:"ytpm.png",
+                        name: 'Youtube Music',
+                        plans: [{
+                            plan: '1-month',
+                            cost: 59,
+                            type: 1
+                        }],
+                    },
+                    {
+                        img:"spot.png",
+                        name: 'Spotify',
+                        plans: [{
+                            plan: '1-month',
+                            cost: 129,
+                            type: 1
+                        },{
+                            plan: 'Yearly',
+                            cost: 1438,
+                            type: 2
+                        }],
+                    },
+                    {
+                        img:"alt.jpg",
+                        name: 'Alt Balaji',
+                        plans: [{
+                            plan: '1-month',
+                            cost: 34,
+                            type: 1
+                        },{
+                            plan: '12-month',
+                            cost: 300,
+                            type: 2
+                        }],
+                    },
+                    {
+                        img:"sony.jpg",
+                        name: 'SonyLIV',
+                        plans: [{
+                            plan: '1-month',
+                            cost: 299,
+                            type: 1
+                        },{
+                            plan: '12-month',
+                            cost: 999,
+                            type: 2
+                        }],
                     }],
                 subs: [
 

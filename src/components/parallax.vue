@@ -9,7 +9,7 @@
 
                     <div class="title">Easily Look over your expenditure</div>
                     <div class="desc">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores assumenda error esse fugiat id illum, incidunt natus nemo nihil quidem quod recusandae repudiandae rerum similique sint sunt ullam voluptatibus.
+                        As we all know there has been a rise in the online services such as Netflix, Amazon prime , spotify, etc in India. Sometimes we lose the track of all the services that we are subscribed to, hence we have come up with a dashboard system to keep track of all the services in a refined way.
                     </div>
                 </div>
                 <div class="col-sm">
@@ -28,7 +28,7 @@
 
                     <div class="title">Get in-depth analysis of your subscriptions</div>
                     <div class="desc">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, accusamus aperiam aspernatur beatae corporis delectus dolorem eius et exercitationem in libero minima odio quae quam quis ratione rem sapiente sequi.
+                        The user gets to watch over all of his payment linked to these services. His monthly and yearly expenditure on online subscriptions. We will provide the user with a login system and a dashboard in which they can check over all these things.
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
 
                     <div class="title">Plan your expenditure</div>
                     <div class="desc">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium assumenda delectus enim excepturi explicabo neque officiis omnis, saepe! Architecto doloremque ex exercitationem illo minus nemo sint tenetur veniam voluptatem!
+                        This system not only provides its user with a dashboard and expenditure system, but also gives the user a ease to plan out his or her future expenditure in streaming services. you can plan ahead on how much you want to spend on online streaming platforms.
                     </div>
                 </div>
                 <div class="col-sm">
