@@ -54,6 +54,7 @@ export default {
         clients: null,
         flag: false,
         route: "",
+        top: 0
       }
     },
     methods:{
@@ -66,7 +67,7 @@ export default {
                        for(let key in this.clients){ 
           
          if(this.clients[key].email===this.user.email && this.clients[key].password===this.user.password)
-               { this.flag=false;
+               { this.top=1;
                console.log('false');
                key=String(key);
                this.route='/'+key+'/dashboard';
@@ -74,10 +75,11 @@ export default {
                    this.$store.state.active[i]=this.clients[key].active[i];
                }
                }
-            else
-                {this.flag=true;
-                console.log('true');}
-            }  
+            }
+                if(this.top===1)
+                    this.flag=false;
+                else
+                    this.flag=true;
                 }
             );  
         }
