@@ -62,6 +62,7 @@ export default {
         padding-bottom: 20px;
     }
     h1{
+        margin-top: 20px;
         font-weight: 800;
     }
     .back{
