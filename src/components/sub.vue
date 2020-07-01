@@ -37,7 +37,7 @@
         <div class="bill">
             <h1>Your Subscriptions</h1>
             <hr>
-            <b-table striped hover :items="$store.state.active"></b-table>
+            <b-table striped hover :items="$store.state.active" :fields="fields"></b-table>
 
         </div>
         <br><br>
@@ -52,6 +52,12 @@
         mixins: [service],
         data(){
             return {
+                fields:  [
+                    {key: 'name'},
+                    {key: 'cost', sortable: true},
+                    {key: 'plan'},
+                    {key: 'sub'},
+        ],
                 monthly: 10,
                 yearly: 120,
                 display: false,

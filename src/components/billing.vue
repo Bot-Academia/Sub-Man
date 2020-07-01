@@ -32,14 +32,14 @@
                         <h2>Monthly Plans</h2>
                         <hr>
                         <br>
-                        <b-table striped hover :items="month"></b-table>
+                        <b-table striped hover :items="month" :fields="fields"></b-table>
                         <br><br>
                     </div>
                     <div class="col-sm bill-box box">
                         <h2>Yearly Plans</h2>
                         <hr>
                         <br>
-                        <b-table striped hover :items="year"></b-table>
+                        <b-table striped hover :items="year" :fields="fields"></b-table>
                         <br><br>
                     </div>
                 </div>
@@ -56,6 +56,12 @@
         name: "billing",
         data(){
             return {
+                fields:  [
+                    {key: 'name'},
+                    {key: 'cost', sortable: true},
+                    {key: 'plan'},
+                    
+                ],
                 monthly: 0,
                 yearly: 0,
                 year: [],
