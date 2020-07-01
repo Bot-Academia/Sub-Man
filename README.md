@@ -1,6 +1,9 @@
 # Sub-Man
 idea: As we all know there has been a rise in the online services such as Netflix, Amazon prime , spotify, etc in India. Sometimes we lose the track of all the services that we are subscribed to, hence we have come up with a dashboard system to keep track of all the services in a refined way. The user gets to watch over all of his payment linked to these services. His monthly and yearly expenditure on online subscriptions. We will provide the user with a login system and a dashboard in which they can check over all these things.
 
+## Website
+[sub-man](https://sub-man.netlify.app/)
+
 ## Tech Stack
 Frontend: Vue.js, Bootstrap-Vue |
 Backend: Node.js and Firebase
