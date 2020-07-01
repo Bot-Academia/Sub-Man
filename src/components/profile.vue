@@ -70,11 +70,7 @@ import axios from "axios";
                 email: "test@test.com",
                 password: "password",
                 country: "country",
-                active:[
-            {name: "name",
-            cost: "cost",
-            plan: "plan",
-            sub: "sub"}]},
+                active:[]},
                 key: null,
             };
         },

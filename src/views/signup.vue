@@ -54,11 +54,7 @@ export default {
             email: null,
             password: null,
             country: null,
-            active:[
-            {name: "name",
-            cost: "cost",
-            plan: "plan",
-            sub: "sub"}]
+            active:[]
             },
             flag: false,
         };
