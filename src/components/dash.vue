@@ -53,6 +53,8 @@
 </template>
 
 <script>
+    import {mapGetters} from "vuex";
+
     export default {
         name: "dash",
         data(){
@@ -60,12 +62,37 @@
                 timestamp: "",
                 name: 'Vinayak Sharma',
                 logos: ["disney.jpg","hulu.png","netflix.jpg","prime.png"],
-              monthly: 10,
-              yearly: 120,
+                month: [],
+                year: [],
+                monthly: 0,
+                yearly: 0
             };
         },
         created() {
             setInterval(this.getNow, 1000);
+            for(let i=0;i<this.dcount.length;i++){
+                if(this.dcount[i].sub=='Monthly'){
+                    this.month.push(this.dcount[i]);
+                }else{
+                    this.year.push(this.dcount[i]);
+                }
+            }
+            for(let i=0;i<this.month.length;i++){
+                this.monthly+=this.month[i].cost;
+            }
+            for(let i=0;i<this.year.length;i++){
+                this.monthly+=this.year[i].cost/12;
+            }
+
+            for(let i=0;i<this.year.length;i++){
+                this.yearly+=this.year[i].cost;
+            }
+            for(let i=0;i<this.month.length;i++){
+                this.yearly+=this.month[i].cost*12;
+            }
+
+            this.yearly=this.yearly.toFixed(2);
+            this.monthly=this.monthly.toFixed(2);
         },
         methods: {
             getNow: function() {
@@ -75,7 +102,10 @@
                 const dateTime = date +' '+ time;
                 this.timestamp = dateTime;
             }
-        }
+        },
+    computed: mapGetters([
+        'dcount'
+    ])
     }
 </script>
 

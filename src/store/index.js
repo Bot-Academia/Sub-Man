@@ -5,8 +5,14 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-
-    CurrentCode:''
+    active: [],
+    monthcost: 0,
+    yearcost: 0,
+  },
+  getters: {
+    dcount: state => {
+      return state.active ;
+    }
   },
   mutations: {
   },

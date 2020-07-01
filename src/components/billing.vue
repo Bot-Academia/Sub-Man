@@ -51,45 +51,48 @@
 </template>
 
 <script>
+    import { mapGetters } from 'vuex';
     export default {
         name: "billing",
         data(){
             return {
                 monthly: 0,
                 yearly: 0,
-                month: [{
-                    name: 'Netflix',
-                    cost: 800
-                },
-                    {
-                        name: 'Disney',
-                        cost: 500
-                    }],
-                year: [{
-                    name: 'Prime',
-                    cost: 1000
-                },{
-                    name: 'youtube',
-                    cost: 1200
-                }]
+                year: [],
+                month: []
             };
         },
         created() {
+            for(let i=0;i<this.dcount.length;i++){
+             if(this.dcount[i].sub=='Monthly'){
+                 this.month.push(this.dcount[i]);
+             }else{
+                 this.year.push(this.dcount[i]);
+             }
+            }
             for(let i=0;i<this.month.length;i++){
                 this.monthly+=this.month[i].cost;
             }
             for(let i=0;i<this.year.length;i++){
                 this.monthly+=this.year[i].cost/12;
             }
+
             for(let i=0;i<this.year.length;i++){
                 this.yearly+=this.year[i].cost;
             }
             for(let i=0;i<this.month.length;i++){
                 this.yearly+=this.month[i].cost*12;
             }
+
             this.yearly=this.yearly.toFixed(2);
             this.monthly=this.monthly.toFixed(2);
-        }
+            this.$store.state.monthcost=this.monthly;
+            this.$store.state.yearcost=this.yearly;
+
+        },
+        computed: mapGetters([
+            'dcount'
+        ])
     }
 </script>
 

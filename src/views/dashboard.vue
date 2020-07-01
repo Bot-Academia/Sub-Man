@@ -23,9 +23,9 @@
             </router-link>
         </appmenu>
         <main id="page-wrap">
-            <keep-alive>
+
                 <component :is="selected"></component>
-            </keep-alive>
+
         </main>
     </div>
 </template>
@@ -69,7 +69,7 @@
     a{
         cursor: pointer;
     }
-    
+
     #app{
         background-image: url("../assets/sbg.jpg");
         width: 100%;
