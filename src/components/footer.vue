@@ -30,7 +30,7 @@
     .footer {
         font-family: "Poppins", sans-serif;
         font-size: large;
-        position: fixed;
+        position: relative;
         width: 100%;
         bottom: 0;
         background-color: #228be6;

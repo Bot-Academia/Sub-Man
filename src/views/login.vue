@@ -19,15 +19,15 @@
         <br><br>
         <p>New to Subman?<router-link to="/"> Sign up now</router-link></p>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <appfooter></appfooter>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 </div>
 </template>
 
