@@ -14,7 +14,7 @@
         <br>
         <b-form-input v-model="user.password" placeholder="Password" :type="'password'" :state="null" required></b-form-input>
         <br>
-        <b-button variant="success" @click="submit"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</b-button>
+       <router-link :to='route'><b-button variant="success" @click="submit"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</b-button></router-link>
         </form>
         <br><br>
         <p>New to Subman?<router-link to="/signup"> Sign up now</router-link></p>
@@ -49,10 +49,11 @@ export default {
         user:{
             email: null,
             password: null,
-            id: null
+            id: "id"
         },
         clients: null,
         flag: false,
+        route: "",
       }
     },
     methods:{
@@ -68,7 +69,10 @@ export default {
           
          if(this.clients[key].email===this.user.email && this.clients[key].password===this.user.password)
                { this.flag=false;
-               console.log('false');}
+               console.log('false');
+               key=String(key);
+               this.route='/'+key+'/dashboard';
+               }
             else
                 {this.flag=true;
                 console.log('true');}
