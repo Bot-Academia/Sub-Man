@@ -27,11 +27,11 @@
             <ul>
                 <li v-for="(plan,index) in  subman.logos[saved].plans" :key="plan.id">
                     <b-form-group :label='plan.plan'>
-                        <b-form-radio v-model="selected" name="some-radios" :value="index">{{plan.cost}}</b-form-radio>
+                        <b-form-radio v-model="selected" name="some-radios" :value="index">Cost: {{plan.cost}}</b-form-radio>
                     </b-form-group>
                 </li>
             </ul>
-            <button class="btn btn-primary" @click="submit">Submit</button>
+            <button class="btn btn-primary" @click="submit" style="text-align: center">Submit</button>
         </div>
         <br><br>
         <div class="bill">
@@ -70,14 +70,14 @@
                 var cost=this.subman.logos[this.saved].plans[this.selected].cost;
                 var plan=this.subman.logos[this.saved].plans[this.selected].plan;
                 var sub = '';
-
+                var image = this.subman.logos[this.saved].img;
                 if(this.subman.logos[this.saved].plans[this.selected].type===1){
                      sub='Monthly';
                 }else{
                      sub='Yearly';
                 }
                 var addition = {
-                    name,cost,plan,sub
+                    name,cost,plan,sub,image
                 };
                 this.$store.state.active.push(addition)
                 this.display=false;

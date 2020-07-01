@@ -13,7 +13,7 @@
                     </div>
                 </div>
                 <div class="col-sm">
-
+                    <img src="../assets/chrome_t0p41b0a03.png" class="img-thumbnail" />
                 </div>
             </div>
 </div>
@@ -22,6 +22,7 @@
             <div class="row">
                 <div class="col-sm">
 
+                    <img src="../assets/ShareX_7o05bXvUFQ.png" class="img-thumbnail"/>
                 </div>
                 <div class="col-sm">
 
@@ -44,7 +45,7 @@
                 </div>
                 <div class="col-sm">
 
-                </div>
+                    <img src="../assets/ShareX_nBFCXa1TJk.png" class="img-thumbnail"/></div>
             </div>
 </div>
 

@@ -42,9 +42,9 @@
             <br>
 
             <ul>
-                <li v-for="name in logos" :key="name.id">
+                <li v-for="name in dcount" :key="name.id">
                     <img
-                        :src="require('../assets/' + name)"
+                        :src="require('../assets/' + name.image)"
                         class="img-thumbnail"
                 /></li>
             </ul>
@@ -61,7 +61,6 @@
             return {
                 timestamp: "",
                 name: 'Vinayak Sharma',
-                logos: ["disney.jpg","hulu.png","netflix.jpg","prime.png"],
                 month: [],
                 year: [],
                 monthly: 0,
