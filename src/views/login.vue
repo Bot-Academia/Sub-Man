@@ -1,5 +1,5 @@
 <template>
-<div>
+<div id="login">
     <app-header></app-header>
     <br>
     login
@@ -18,5 +18,7 @@ export default {
 
 
 <style scoped>
-
+#login{
+background: url("../assets/background.png");
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="home">
         <appheader></appheader>
         <br>
         <feature></feature>
@@ -28,5 +28,8 @@ export default {
 
 
 <style scoped>
+#home{
+    background: url("../assets/background.png");
+}
 
 </style>
