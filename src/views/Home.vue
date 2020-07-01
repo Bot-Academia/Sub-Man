@@ -1,6 +1,9 @@
 <template>
     <div id="home">
-        <appheader></appheader>
+        <div class="bg-img">
+            <appheader></appheader>
+        </div>
+
         <br>
         <feature></feature>
         <br><br>
@@ -28,8 +31,17 @@ export default {
 
 
 <style scoped>
-#home{
+.bg-img{
     background: url("../assets/background.png");
+    min-height: 380px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Needed to position the navbar */
+    position: relative;
 }
 
 </style>

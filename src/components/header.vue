@@ -11,7 +11,7 @@
         <b-navbar-nav class="ml-auto">
           <b-navbar-nav>
             <b-nav-item
-                    style="font-size: 30px; font-weight: 400">Pied_Piper</b-nav-item>
+                    style="font-size: 30px; font-weight: 400;">Pied_Piper</b-nav-item>
           </b-navbar-nav>
         </b-navbar-nav>
     </b-navbar>
@@ -27,7 +27,7 @@ export default {
 <style scoped>
 #header{
     background-color: transparent;
-    color: black;
+    color: white;
 }
 
 </style>
