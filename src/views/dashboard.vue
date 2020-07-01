@@ -19,7 +19,7 @@
 
             <br><br><br><br><br><br><br>
             <router-link id="home" to="/">
-                <span><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</span>
+                <span @click="update"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</span>
             </router-link>
         </appmenu>
         <main id="page-wrap">
@@ -36,6 +36,7 @@
     import billing from "../components/billing";
     import sub from "../components/sub";
     import dash from "../components/dash";
+    import axios from "axios";
 
     export default {
         data(){
@@ -54,6 +55,10 @@
             change(item) {
                 this.selected= item;
             },
+            update(){
+                let key=this.$route.params.id;
+                axios.put(`https://subman-f6e20.firebaseio.com/user/${key}/active.json`,this.$store.state.active);
+            }
         }
     }
 </script>

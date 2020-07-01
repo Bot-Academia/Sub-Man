@@ -10,7 +10,7 @@
         <h1><b>Sign Up</b></h1>
         <br>
         <form class="container">
-        <b-form-input v-model="user.name" placeholder="Name" :type="'text'" :state="null" required></b-form-input>
+        <b-form-input v-model="user.user_name" placeholder="Name" :type="'text'" :state="null" required></b-form-input>
         <br>    
         <b-form-input v-model="user.email" placeholder="E-Mail" :type="'email'" :state="null" required></b-form-input>
         <br>
@@ -50,10 +50,16 @@ export default {
     data: function(){
         return {
           user:{  
-            name: null,
+            user_name: null,
             email: null,
             password: null,
-            country: null,},
+            country: null,
+            active:[
+            {name: "name",
+            cost: "cost",
+            plan: "plan",
+            sub: "sub"}]
+            },
             flag: false,
         };
     },

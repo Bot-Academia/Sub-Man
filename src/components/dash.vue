@@ -54,6 +54,7 @@
 
 <script>
     import {mapGetters} from "vuex";
+    import axios from "axios";
 
     export default {
         name: "dash",
@@ -92,6 +93,13 @@
 
             this.yearly=this.yearly.toFixed(2);
             this.monthly=this.monthly.toFixed(2);
+
+            axios.get("https://subman-f6e20.firebaseio.com/user.json")
+            .then(response=>{
+                const data = response.data;
+                let key=this.$route.params.id;
+                this.name=data[key].user_name;
+            })
         },
         methods: {
             getNow: function() {
