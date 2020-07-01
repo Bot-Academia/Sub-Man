@@ -2,17 +2,24 @@
     <div>
         <appheader></appheader>
         <br>
-        Home
+        <feature></feature>
+        <br><br>
+        <appfooter></appfooter>
     </div>
 </template>
 
 
 
 <script>
-import header from  "../components/header"
+import header from  "../components/header";
+import footer from "../components/footer";
+import parallax from "../components/parallax";
+
 export default {
     components:{
-        appheader: header
+        appheader: header,
+        appfooter: footer,
+        feature: parallax
     }
 }
 </script>
