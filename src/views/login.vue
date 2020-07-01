@@ -7,17 +7,31 @@
     </div>
     <br>
     <div class="jumbotron container">
+        <h1><b>Login</b></h1>
+        <br>
         <form class="container">
         <b-form-input v-model="text" placeholder="E-Mail" :type="'email'" :state="null" required></b-form-input>
         <br>
         <b-form-input v-model="text" placeholder="Password" :type="'password'" :state="null" required></b-form-input>
         <br>
-        <b-button variant="success">Login</b-button>
+        <b-button variant="success"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</b-button>
         </form>
+        <br><br>
+        <p>New to Subman?<router-link to="/"> Sign up now</router-link></p>
     </div>
     <appfooter></appfooter>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </div>
 </template>
+
+
 
 
 <script>
@@ -35,7 +49,7 @@ export default {
 <style scoped>
     .bg-img{
         background: url("../assets/background.png");
-        min-height: 580px;
+        min-height: 300px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -45,17 +59,27 @@ export default {
     .header1{
         background-color: rgba(150, 152, 153,0.3);
     }
-/*#login{*/
-/*background: url("../assets/background.png");*/
-/*max-height: 100%;*/
-/*}*/
+
 .jumbotron{
-    margin-top: 5%;
-	background: rgba(255,255,255,.5);
+	background: rgba(0, 0, 0, 0.75);
     width: 35%;
     height: 50%;
+    margin-top: 3%;
+    color: white;
 }
 .jumbotron button{
     float: right;
 }
+
+@media (max-width: 900px){
+    .jumbotron{
+        width: 50%;
+    }
+}
+@media (max-width: 400px){
+    .jumbotron{
+        width: 70%;
+    }
+}
+
 </style>
