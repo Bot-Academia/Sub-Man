@@ -18,7 +18,9 @@
             </a>
         </appmenu>
         <main id="page-wrap">
-            <component :is="selected"></component>
+            <keep-alive>
+                <component :is="selected"></component>
+            </keep-alive>
         </main>
     </div>
 </template>
