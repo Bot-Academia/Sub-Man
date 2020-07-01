@@ -10,18 +10,19 @@
         <h1><b>Sign Up</b></h1>
         <br>
         <form class="container">
-        <b-form-input v-model="text" placeholder="Name" :type="'text'" :state="null" required></b-form-input>
+        <b-form-input v-model="user.name" placeholder="Name" :type="'text'" :state="null" required></b-form-input>
         <br>    
-        <b-form-input v-model="text" placeholder="E-Mail" :type="'email'" :state="null" required></b-form-input>
+        <b-form-input v-model="user.email" placeholder="E-Mail" :type="'email'" :state="null" required></b-form-input>
         <br>
-        <b-form-input v-model="text" placeholder="Password" :type="'password'" :state="null" required></b-form-input>
+        <b-form-input v-model="user.password" placeholder="Password" :type="'password'" :state="null" required ></b-form-input>
         <br>
-        <b-form-input v-model="text" placeholder="Confirm Password" :type="'password'" :state="null" required></b-form-input>
+        <b-form-input  placeholder="Confirm Password" :type="'password'" :state="null" required></b-form-input>
         <br>
-        <b-form-input v-model="text" placeholder="Country" :type="'text'" :state="null" required></b-form-input>
+        <b-form-input v-model="user.country" placeholder="Country" :type="'text'" :state="null" required></b-form-input>
         <br>  
-        <b-button variant="success"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign-Up</b-button>
         </form>
+        <button class="btn btn-success" @click="submit"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign-Up</button>
+        <div class="alert alert-success" v-show="flag">Your are now Signed-up. Thank you for registering. <router-link to="/login">Login-here</router-link> here </div>
         <br><br>
     </div>
     <br>
@@ -40,11 +41,29 @@
 <script>
 import header from "../components/header";
 import footer from "../components/footer";
+import axios from "axios";
 export default {
     components: {
         appHeader: header,
         appfooter: footer
+    },
+    data: function(){
+        return {
+          user:{  
+            name: null,
+            email: null,
+            password: null,
+            country: null,},
+            flag: false,
+        };
+    },
+    methods:{
+        submit(){
+            this.flag=!this.flag;
+            axios.post("https://subman-f6e20.firebaseio.com/user.json",this.user);
+        }
     }
+
 }
 </script>
 
