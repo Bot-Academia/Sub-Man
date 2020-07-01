@@ -1,6 +1,10 @@
 <template>
-<div id="login">
-    <app-header></app-header>
+<div >
+    <div class="bg-img">
+        <div class="header1">
+            <app-header></app-header>
+        </div>
+    </div>
     <br>
     <div class="jumbotron container">
         <form class="container">
@@ -29,10 +33,22 @@ export default {
 
 
 <style scoped>
-#login{
-background: url("../assets/background.png");
-max-height: 100%;
-}
+    .bg-img{
+        background: url("../assets/background.png");
+        min-height: 580px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        box-shadow: 10px 10px 54px -6px rgba(0, 0, 0, 0.75);
+    }
+    .header1{
+        background-color: rgba(150, 152, 153,0.3);
+    }
+/*#login{*/
+/*background: url("../assets/background.png");*/
+/*max-height: 100%;*/
+/*}*/
 .jumbotron{
     margin-top: 5%;
 	background: rgba(255,255,255,.5);

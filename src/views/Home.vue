@@ -39,9 +39,6 @@ export default {
 }
 </script>
 
-
-
-
 <style scoped>
 .bg-img{
     background: url("../assets/background.png");
@@ -58,7 +55,7 @@ export default {
     .login{
         text-align: center;
         color: white;
-        padding-top: 20px;
+        padding-top: 50px;
         padding-bottom: 20px;
     }
     h1{
