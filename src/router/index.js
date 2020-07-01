@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import login from '../views/login.vue'
+import dashboard from "../views/dashboard";
 
 Vue.use(VueRouter)
 
@@ -16,6 +17,11 @@ Vue.use(VueRouter)
     name: 'login',
     component: login
   },
+    {
+      path: '/:id/dashboard',
+      name: 'dashboard',
+      component: dashboard
+    },
 ]
 
 const router = new VueRouter({
