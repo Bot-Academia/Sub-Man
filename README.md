@@ -5,6 +5,11 @@ idea: As we all know there has been a rise in the online services such as Netfli
 Frontend: Vue.js
 Backend: Node.js and Firebase
 
+## Team: Pied_Piper
+Members: 
+[Hrishikesh](https://github.com/codetheorem)
+[Vinayak](https://github.com/vinayaksh42)
+
 ## Wireframe
 
 ![chrome_v2MZPluS1O](https://user-images.githubusercontent.com/54861487/86217035-88a49080-bb9c-11ea-9aec-41cd346857bc.png)
