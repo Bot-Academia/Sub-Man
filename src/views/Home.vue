@@ -7,9 +7,10 @@
         </div>
         <div class="back">
             <div class="container login">
-                <h1>A place to keep all your subscriptions </h1>
-                <button class="btn btn-dark">Login</button>
-                <button class="btn btn-dark">Sign up</button>
+                <h1>SUBcription-MANager</h1>
+                <h2>A place to keep all your subscriptions </h2>
+                <button class="btn btn-dark"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+                <button class="btn btn-dark"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign up</button>
                 <p><button class="btn btn-dark" ><a href="#feature">See Features</a></button></p>
             </div>
         </div>
@@ -67,10 +68,13 @@ export default {
         background-color: #228be6;
     }
     button{
-        font-size: 24px;
+        font-size: 34px;
         margin: 10px 10px 10px 10px;
     }
     a:hover{
         text-decoration: none;
+    }
+    h2{
+        font-weight: 500;
     }
 </style>
