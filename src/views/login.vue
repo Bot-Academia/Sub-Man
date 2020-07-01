@@ -17,7 +17,7 @@
         <b-button variant="success"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</b-button>
         </form>
         <br><br>
-        <p>New to Subman?<router-link to="/"> Sign up now</router-link></p>
+        <p>New to Subman?<router-link to="/signup"> Sign up now</router-link></p>
     </div>
     <br>
     <br>
