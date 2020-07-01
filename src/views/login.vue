@@ -10,14 +10,15 @@
         <h1><b>Login</b></h1>
         <br>
         <form class="container">
-        <b-form-input v-model="text" placeholder="E-Mail" :type="'email'" :state="null" required></b-form-input>
+        <b-form-input v-model="user.email" placeholder="E-Mail" :type="'email'" :state="null" required></b-form-input>
         <br>
-        <b-form-input v-model="text" placeholder="Password" :type="'password'" :state="null" required></b-form-input>
+        <b-form-input v-model="user.password" placeholder="Password" :type="'password'" :state="null" required></b-form-input>
         <br>
-        <b-button variant="success"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</b-button>
+        <b-button variant="success" @click="submit"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</b-button>
         </form>
         <br><br>
         <p>New to Subman?<router-link to="/signup"> Sign up now</router-link></p>
+        <div class="alert alert-danger" v-show="flag">You are not registered.</div>
     </div>
     <br>
     <br>
@@ -37,10 +38,42 @@
 <script>
 import header from "../components/header";
 import footer from "../components/footer";
+import axios from "axios";
 export default {
     components: {
         appHeader: header,
         appfooter: footer
+    },
+    data:function (){
+      return{  
+        user:{
+            email: null,
+            password: null,
+            id: null
+        },
+        clients: null,
+        flag: false,
+      }
+    },
+    methods:{
+        submit(){
+            axios.get('https://subman-f6e20.firebaseio.com/user.json')
+            .then(
+                response=>{
+                    this.clients=response.data;
+                    console.log(this.clients);
+                }
+            );
+           for(let key in this.clients){ 
+          
+         if(this.clients[key].email===this.user.email && this.clients[key].password===this.user.password)
+               { this.flag=false;
+               console.log('false');}
+            else
+                {this.flag=true;
+                console.log('true');}
+            }    
+        }
     }
 }
 </script>
