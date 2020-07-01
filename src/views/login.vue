@@ -57,26 +57,29 @@ export default {
       }
     },
     methods:{
-        submit(){
-            axios.get('https://subman-f6e20.firebaseio.com/user.json')
+       async submit(){
+           await axios.get('https://subman-f6e20.firebaseio.com/user.json')
             .then(
-                response=>{
+               response=>{
                     this.clients=response.data;
                     console.log(this.clients);
-                }
-            );
-           for(let key in this.clients){ 
+                       for(let key in this.clients){ 
           
          if(this.clients[key].email===this.user.email && this.clients[key].password===this.user.password)
                { this.flag=false;
                console.log('false');
                key=String(key);
                this.route='/'+key+'/dashboard';
+               for(var i=0;i<this.clients[key].active.length;i++){
+                   this.$store.state.active[i]=this.clients[key].active[i];
+               }
                }
             else
                 {this.flag=true;
                 console.log('true');}
-            }    
+            }  
+                }
+            );  
         }
     }
 }
