@@ -1,15 +1,92 @@
 <template>
-    <div>
-        <h1>dash</h1>
+    <div class="container">
+        <div class="bill">
+            <h1>Billing</h1>
+            <hr>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm bill-box">
+                        Monthly
+                        <hr>
+                        <br>
+                        Amount: Rs{{monthly}}
+                        <br><br>
+                    </div>
+                    <div class="col-sm bill-box">
+                        Yearly
+                        <hr>
+                        <br>
+                        Amount: Rs{{yearly}}
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br><br>
+        <div class="sub">
+            <h1>Subscriptions</h1>
+            <hr>
+            <br>
+
+            <ul>
+                <li v-for="name in logos" :key="name.id">
+                    <img
+                        :src="require('../assets/' + name)"
+                        class="img-thumbnail"
+                /></li>
+            </ul>
+    </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "dash"
+        name: "dash",
+        data(){
+            return {
+                logos: ["disney.jpg","hulu.png","netflix.jpg","prime.png"],
+              monthly: 10,
+              yearly: 120,
+            };
+        }
     }
 </script>
 
 <style scoped>
 
+.bill,.sub{
+    background-color: rgba(34, 139, 230,0.5);
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 10px 10px 54px -6px rgba(0, 0, 0, 0.75);
+}
+    h1{
+        margin: 15px 5px 15px 5px;
+    }
+    .bill-box{
+        margin: 20px 20px 20px 20px;
+        background-color: rgba(34, 139, 230,0.7);
+        font-size: 24px;
+        font-weight: 700;
+        border: 3px solid lightblue;
+        border-radius: 10px;
+
+    }
+hr{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 100% !important;
+    background: lightblue;
+    height: 5px;
+}
+    .img-thumbnail{
+        border: 3px solid white;
+        margin: 10px 10px 10px 10px;
+        height: 100px;
+        width: 100px;
+    }
+ul li {
+    display:inline;
+}
 </style>

@@ -16,6 +16,11 @@
             <a id="home" @click="change('profile')">
                 <span><i class="fa fa-user" aria-hidden="true"></i> My profile</span>
             </a>
+
+            <br><br><br><br><br><br><br>
+            <router-link id="home" to="/">
+                <span><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</span>
+            </router-link>
         </appmenu>
         <main id="page-wrap">
             <keep-alive>
