@@ -1,12 +1,11 @@
 <template>
 <div id="header">
 <b-navbar toggleable="lg" type="dark" class="navbar navbar-expand-lg navbar-dark">
-      <b-navbar-brand href="#"
+   <router-link to="/"><b-navbar-brand 
                       id="navbar-brand"
-                      @click="change1('apphome')"
                       style="color: #228be6; font-size: 30px; font-weight: 800"
         >Subman</b-navbar-brand
-      >
+      ></router-link>
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <b-navbar-nav>
