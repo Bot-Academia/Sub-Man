@@ -61,7 +61,7 @@
         data(){
             return {
                 timestamp: "",
-                name: 'Vinayak Sharma',
+                name: '',
                 month: [],
                 year: [],
                 monthly: 0,
