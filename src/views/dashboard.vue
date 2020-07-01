@@ -69,4 +69,10 @@
     a{
         cursor: pointer;
     }
+    
+    #app{
+        background-image: url("../assets/sbg.jpg");
+        width: 100%;
+        z-index: 0;
+    }
 </style>

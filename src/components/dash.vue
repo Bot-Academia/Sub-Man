@@ -1,5 +1,17 @@
 <template>
     <div class="container">
+        <div class="box">
+            <div class="row">
+                <div class="col-sm bill-box">
+                    <h3><span class="name">Name: {{name}} </span> </h3>
+                </div>
+                <div class="col-sm bill-box">
+                   <h3> <span class="time">Time:{{ timestamp }}</span></h3>
+                </div>
+            </div>
+
+        </div>
+        <br><br>
         <div class="bill">
             <h1>Billing</h1>
             <hr>
@@ -45,10 +57,24 @@
         name: "dash",
         data(){
             return {
+                timestamp: "",
+                name: 'Vinayak Sharma',
                 logos: ["disney.jpg","hulu.png","netflix.jpg","prime.png"],
               monthly: 10,
               yearly: 120,
             };
+        },
+        created() {
+            setInterval(this.getNow, 1000);
+        },
+        methods: {
+            getNow: function() {
+                const today = new Date();
+                const date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+                const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+                const dateTime = date +' '+ time;
+                this.timestamp = dateTime;
+            }
         }
     }
 </script>
@@ -89,4 +115,10 @@ hr{
 ul li {
     display:inline;
 }
+    .box{
+        background-color: rgba(34, 139, 230,0.5);
+        border-radius: 15px;
+        box-shadow: 10px 10px 54px -6px rgba(0, 0, 0, 0.75);
+        text-align: center;
+    }
 </style>

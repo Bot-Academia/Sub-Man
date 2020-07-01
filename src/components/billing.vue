@@ -68,6 +68,9 @@
                 year: [{
                     name: 'Prime',
                     cost: 1000
+                },{
+                    name: 'youtube',
+                    cost: 1200
                 }]
             };
         },
