@@ -10,7 +10,7 @@
                 <h1>SUBcription-MANager</h1>
                 <h2>A place to keep all your subscriptions </h2>
                 <router-link to="/login"><button class="btn btn-dark"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button></router-link>
-                <router-link to="/"><button class="btn btn-dark"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign up</button></router-link>
+                <router-link to="/signup"><button class="btn btn-dark"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign up</button></router-link>
                 <p><button class="btn btn-dark" ><a href="#feature">See Features</a></button></p>
             </div>
         </div>
