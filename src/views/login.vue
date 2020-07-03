@@ -14,7 +14,7 @@
         <br>
         <b-form-input v-model="user.password" placeholder="Password" :type="'password'" :state="null" required></b-form-input>
         <br>
-       <router-link :to='route'><b-button variant="success" @click="submit"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</b-button></router-link>
+       <b-button variant="success" @click="submit"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</b-button>
         </form>
         <br><br>
         <p>New to Subman?<router-link to="/signup"> Sign up now</router-link></p>
@@ -74,6 +74,7 @@ export default {
                for(var i=0;i<this.clients[key].active.length;i++){
                    this.$store.state.active[i]=this.clients[key].active[i];
                }
+                   this.$router.push(this.route);
                }
             }
                 if(this.top===1)
