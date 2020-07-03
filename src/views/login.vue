@@ -71,9 +71,10 @@ export default {
                console.log('false');
                key=String(key);
                this.route='/'+key+'/dashboard';
+               if(this.clients[key].active){
                for(var i=0;i<this.clients[key].active.length;i++){
                    this.$store.state.active[i]=this.clients[key].active[i];
-               }
+               }}
                    this.$router.push(this.route);
                }
             }
