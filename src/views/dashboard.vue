@@ -51,6 +51,13 @@
             appsub: sub,
             dash: dash
         },
+        created(){
+            if(!this.$store.state.active.length){
+                this.selected="appsub";
+            }
+            else
+                this.selected="dash";
+        },
         methods: {
             change(item) {
                 this.selected= item;
