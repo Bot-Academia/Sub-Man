@@ -21,7 +21,7 @@
         <b-form-input v-model="user.country" placeholder="Country" :type="'text'" :state="null" required></b-form-input>
         <br>  
         </form>
-        <button class="btn btn-success" @click="submit"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign-Up</button>
+        <button class="btn btn-success" @click="submit" v-show="!flag"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign-Up</button>
         <div class="alert alert-success" v-show="flag">Your are now Signed-up. Thank you for registering. <router-link to="/login">Login-here</router-link> here </div>
         <br><br>
     </div>

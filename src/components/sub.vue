@@ -2,6 +2,7 @@
     <div class="container">
         <div class="sub">
             <h1>Chose your Service</h1>
+            <p>Click on the icon of streaming service and select your plan</p>
             <hr>
             <br>
 
@@ -48,7 +49,7 @@
         <br><br>
         <div class="sub">
             <h1>Manage existing subscriptions</h1>
-            <p>Click on the subscription to remove it</p>
+            <p>Click on the icon of subscription to remove it</p>
             <hr>
             <br>
 
