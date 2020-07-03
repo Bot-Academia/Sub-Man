@@ -68,6 +68,7 @@
 <script>
     import {mapGetters} from "vuex";
     import { service } from "../services.js";
+    import axios from "axios";
     export default {
         name: "sub",
         mixins: [service],
@@ -108,9 +109,15 @@
                 };
                 this.$store.state.active.push(addition)
                 this.display=false;
+                this.update();
             },
             remove(item) {
                 this.$store.state.active.splice(item,1)
+                this.update();
+            },
+            update(){
+                let key=this.$route.params.id;
+                axios.put(`https://subman-f6e20.firebaseio.com/user/${key}/active.json`,this.$store.state.active);
             }
         },
         computed: mapGetters([

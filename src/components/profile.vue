@@ -70,7 +70,7 @@ import axios from "axios";
                 email: "test@test.com",
                 password: "password",
                 country: "country",
-                active:[]},
+                active: this.$store.state.active},
                 key: null,
             };
         },

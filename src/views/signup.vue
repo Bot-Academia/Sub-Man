@@ -80,7 +80,6 @@ export default {
             }else{
                 this.check1=true;
             }
-
         }
     }
 
