@@ -1,5 +1,8 @@
 <template>
 <div >
+    <div id="overlay" v-if="loader">
+        <div class="loader"></div>
+    </div>
     <div class="bg-img">
         <div class="header1">
             <app-header></app-header>
@@ -54,11 +57,13 @@ export default {
         clients: null,
         flag: false,
         route: "",
-        top: 0
+        top: 0,
+        loader: false
       }
     },
     methods:{
        async submit(){
+           this.loader=true;
            await axios.get('https://subman-f6e20.firebaseio.com/user.json')
             .then(
                response=>{
@@ -75,15 +80,17 @@ export default {
                for(var i=0;i<this.clients[key].active.length;i++){
                    this.$store.state.active[i]=this.clients[key].active[i];
                }}
+               this.loader=false;
                    this.$router.push(this.route);
                }
             }
                 if(this.top===1)
                     this.flag=false;
                 else
-                    this.flag=true;
+                    {this.flag=true;
+                    this.loader=false;}
                 }
-            );  
+            );
         }
     }
 }
@@ -125,5 +132,40 @@ export default {
         width: 70%;
     }
 }
+
+#overlay{
+  background-color: rgba(52,58,64,1);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index:1000;
+}
+
+.loader{
+  border: 5px solid grey;
+  border-top: 5px solid orange;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index:2000;
+}
+
+@keyframes spin {
+  0%{ transform: rotate(0deg);}
+  100%{ transform: rotate(360deg);}
+
+}
+
 
 </style>
