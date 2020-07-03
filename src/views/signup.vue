@@ -16,13 +16,16 @@
         <br>
         <b-form-input v-model="user.password" placeholder="Password" :type="'password'" :state="null" required ></b-form-input>
         <br>
-        <b-form-input  placeholder="Confirm Password" :type="'password'" :state="null" required></b-form-input>
+        <b-form-input v-model="password" placeholder="Confirm Password" :type="'password'" :state="null" required></b-form-input>
         <br>
         <b-form-input v-model="user.country" placeholder="Country" :type="'text'" :state="null" required></b-form-input>
         <br>  
         </form>
         <button class="btn btn-success" @click="submit" v-show="!flag"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign-Up</button>
+        <br><br>
         <div class="alert alert-success" v-show="flag">Your are now Signed-up. Thank you for registering. <router-link to="/login">Login-here</router-link> here </div>
+        <div class="alert alert-danger" v-show="check1">Please enter all your details!</div>
+        <div class="alert alert-danger" v-show="check">Confirm password and password are not matching</div>
         <br><br>
     </div>
     <br>
@@ -57,12 +60,27 @@ export default {
             active:[]
             },
             flag: false,
+            password: null,
+            check: false,
+            check1: false
         };
     },
     methods:{
         submit(){
-            this.flag=!this.flag;
-            axios.post("https://subman-f6e20.firebaseio.com/user.json",this.user);
+            if(this.user.user_name!=null && this.user.email!=null && this.user.country!=null && this.user.password!=null){
+                if(this.password==this.user.password){
+                    this.flag=true;
+                    this.check1=false;
+                    this.check=false;
+                    axios.post("https://subman-f6e20.firebaseio.com/user.json",this.user);
+                }else{
+                    this.check1=false;
+                    this.check=true;
+                }
+            }else{
+                this.check1=true;
+            }
+
         }
     }
 
