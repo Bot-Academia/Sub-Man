@@ -1,8 +1,15 @@
 <template>
 <div >
-    <div id="overlay" v-if="loader">
-        <div class="loader"></div>
-    </div>
+  <loader object="#ff7b00" 
+    color1="#ffffff" 
+    color2="#17fd3d" 
+    size="5" 
+    speed="2" 
+    bg="#343a40" 
+    objectbg="#999793" 
+    opacity="100" 
+    name="circular" v-if="loader">
+  </loader>
     <div class="bg-img">
         <div class="header1">
             <app-header></app-header>
