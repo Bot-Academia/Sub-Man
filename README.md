@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/66663a9e6e154e54b4376fb4a370a7d4)](https://app.codacy.com/gh/Bot-Academia/Sub-Man?utm_source=github.com&utm_medium=referral&utm_content=Bot-Academia/Sub-Man&utm_campaign=Badge_Grade_Dashboard)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d5ce78c3-e919-4394-bacf-bcc20d7e26e6/deploy-status)](https://app.netlify.com/sites/sub-man/deploys)
 
 # Sub-Man
