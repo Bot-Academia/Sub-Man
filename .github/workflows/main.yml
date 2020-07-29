@@ -40,8 +40,16 @@ jobs:
       run: git add .
     
      # Runs a set of commands using the runners shell
+    - name: email
+      run: git config --global user.email "codetheorem.dev@gmail.com"
+      
+    - name: name 
+      run:  git config --global user.name "Hrishikesh Agarwal"
+        
     - name: commit 
-      run: git commit -m "added dist folder"
+      run:  git commit -m "added dist folder"
+ 
+     
       
       # Runs a set of commands using the runners shell
     - name: push
