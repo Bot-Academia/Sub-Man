@@ -30,3 +30,19 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Build
       run: npm run build
+      
+      # Runs a set of commands using the runners shell
+    - name: Status
+      run: git status
+      
+      # Runs a set of commands using the runners shell
+    - name: Add
+      run: git add .
+    
+     # Runs a set of commands using the runners shell
+    - name: commit 
+      run: git commit -m "added dist folder"
+      
+      # Runs a set of commands using the runners shell
+    - name: push
+      run: git push
