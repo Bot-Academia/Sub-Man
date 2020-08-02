@@ -34,6 +34,10 @@ jobs:
       # Runs a set of commands using the runners shell
     - name: Status
       run: git status
+    
+     # Runs a set of commands using the runners shell
+    - name: change folder
+      run: cd dist
       
       # Runs a set of commands using the runners shell
     - name: Add
@@ -53,4 +57,4 @@ jobs:
       
       # Runs a set of commands using the runners shell
     - name: push
-      run: git push
+      run: git push origin master:gh-pages
