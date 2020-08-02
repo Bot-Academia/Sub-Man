@@ -1,4 +1,5 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/66663a9e6e154e54b4376fb4a370a7d4)](https://app.codacy.com/gh/Bot-Academia/Sub-Man?utm_source=github.com&utm_medium=referral&utm_content=Bot-Academia/Sub-Man&utm_campaign=Badge_Grade_Dashboard)
+![CI](https://github.com/Bot-Academia/Sub-Man/workflows/CI/badge.svg)
 
 
 # Sub-Man
