@@ -1,5 +1,5 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/66663a9e6e154e54b4376fb4a370a7d4)](https://app.codacy.com/gh/Bot-Academia/Sub-Man?utm_source=github.com&utm_medium=referral&utm_content=Bot-Academia/Sub-Man&utm_campaign=Badge_Grade_Dashboard)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d5ce78c3-e919-4394-bacf-bcc20d7e26e6/deploy-status)](https://app.netlify.com/sites/sub-man/deploys)
+
 
 # Sub-Man
 idea: As we all know there has been a rise in the online services such as Netflix, Amazon prime , spotify, etc in India. Sometimes we lose the track of all the services that we are subscribed to, hence we have come up with a dashboard system to keep track of all the services in a refined way. The user gets to watch over all of his payment linked to these services. His monthly and yearly expenditure on online subscriptions. We will provide the user with a login system and a dashboard in which they can check over all these things.
