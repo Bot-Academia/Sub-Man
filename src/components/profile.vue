@@ -75,7 +75,7 @@ import axios from "axios";
             };
         },
         mounted(){
-            axios.get("https://subman-f6e20.firebaseio.com/user.json")
+            axios.get("https://sub-man-d4cdc-default-rtdb.firebaseio.com/user.json")
             .then(response=>{
                 const data = response.data;
                 this.key=this.$route.params.id;
@@ -87,7 +87,7 @@ import axios from "axios";
             })
         },
         destroyed(){
-            axios.put(`https://subman-f6e20.firebaseio.com/user/${this.key}.json`,this.user);
+            axios.put(`https://sub-man-d4cdc-default-rtdb.firebaseio.com/user/${this.key}.json`,this.user);
         }
     }
 </script>
