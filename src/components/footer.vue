@@ -1,14 +1,13 @@
 <template>
     <div class="footer" id="footers">
-        <a href="https://github.com/vinayaksh42/Sub-Man" id="logo"
+        <a href="https://github.com/Bot-Academia/Sub-Man" id="logo"
         ><i class="fa fa-github" aria-hidden="true"></i
         ></a>
         <p>
             Sub-Man (FinTech)
         </p>
         <p>
-            Developed by <a href="https://github.com/codetheorem">Hrishikesh</a> |
-            <a href="https://github.com/vinayaksh42">Vinayak</a>
+            Developed by <a href="https://github.com/codetheorem">Hrishikesh</a>
         </p>
     </div>
 </template>
