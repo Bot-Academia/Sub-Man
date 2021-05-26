@@ -64,7 +64,7 @@
             },
             update(){
                 let key=this.$route.params.id;
-                axios.put(`https://subman-f6e20.firebaseio.com/user/${key}/active.json`,this.$store.state.active);
+                axios.put(`https://sub-man-d4cdc-default-rtdb.firebaseio.com/user/${key}/active.json`,this.$store.state.active);
             }
         }
     }
