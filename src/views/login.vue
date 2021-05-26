@@ -71,7 +71,7 @@ export default {
     methods:{
        async submit(){
            this.loader=true;
-           await axios.get('https://subman-f6e20.firebaseio.com/user.json')
+           await axios.get('https://sub-man-d4cdc-default-rtdb.firebaseio.com/user.json')
             .then(
                response=>{
                     this.clients=response.data;
