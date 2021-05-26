@@ -72,7 +72,7 @@ export default {
                     this.flag=true;
                     this.check1=false;
                     this.check=false;
-                    axios.post("https://subman-f6e20.firebaseio.com/user.json",this.user);
+                    axios.post("https://sub-man-d4cdc-default-rtdb.firebaseio.com/user.json",this.user);
                 }else{
                     this.check1=false;
                     this.check=true;
